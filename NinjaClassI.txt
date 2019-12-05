@@ -1,0 +1,28 @@
+function Ninja(name) {
+
+	var ninja = {};
+	var speed = 3;
+	var strength = 3;
+	ninja.name = name;
+	ninja.health = 100;
+	ninja.speed = speed;
+	ninja.strength = strength;
+	ninja.sayName = function() {
+		console.log("My ninja name is " + ninja.name + " !");
+	}
+	ninja.showStats = function() {
+		console.log("Name:" + ninja.name + "Health:" + ninja.health + "Speed:" + ninja.speed + "Strength:" + ninja.strength);
+	}
+	ninja.drinkSake = function() {
+		console.log(ninja.name + "drank sake!");
+	}
+	var privateMethod = function() {
+		console.log(this);
+	}
+	return ninja;
+}
+var ninja1 = new Ninja("Hyabusa");
+ninja1.sayName();
+// -> "My ninja name is Hyabusa!"
+ninja1.showStats();
+// -> "Name: Hayabusa, Health: 100, Speed: 3, Strength: 3"
